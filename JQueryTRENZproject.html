@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+    
+<!-- home page nav bar -->
+
+    <div data-role="page" id="home" data-theme = "b">
+        <div data-role="header">
+            <h1> <i>JQuery Mobile Project </i></h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home" data-transition="flip">Home</a></li>
+                    <li><a href="#contact" data-icon="grid" data-transition="flip">contact</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+<!-- Home page content-->
+        
+        
+        <div data-role="main" class="ui-content">
+            <h2> Home</h2>
+            <p>This is the home page </p>
+            
+            
+<!-- home page orientation-->            
+            
+            <script>
+                $(document).on("pagecreate",function(event){
+                    $(window).on("orientationchange",function(event){
+                        alert("Orientation changed to: " + event.orientation);
+                    });                     
+                    });
+            </script>
+            
+        </div>
+
+        
+        
+<!-- Home page footer-->
+        
+        
+        <div data-role="footer">
+            <p> This is the footer </p>
+        </div>
+    </div>
+    
+
+<!--contact page navbar-->
+
+    <div data-role="page" id="contact" data-theme="b">
+        <div data-role="header">
+            <h1><i>JQuery Mobile Project</i></h1>
+            <div data-role="navbar"">
+                <ul>
+                    <li><a href= "#home" data-icon="home" data-transition="flip">Home</a></li>
+                    <li><a href="#contact" data-icon="grid" data-transition="flip">contact</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+
+                                                                                  
+<!-- Contact page content-->
+                                                                                  
+                                                                                  
+        <div data-role="main" class="ui-content">
+            <h2>Contact </h2>
+            <p> This is the contact page.</p>
+
+                                                
+                                               
+                                                
+                                   
+       
+        </div>
+                                                    
+<!-- Contact oage footer-->
+                                                    
+                                                    
+        <div data-role="footer">
+        <p>This is the footer </p>
+        </div>
+    </div>
+
+   
+        
+
+</body>
+</html>
