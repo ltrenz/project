@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>  
+
+    
+<style>
+    body {
+    background-color: hotpink;
+    align-content: left;
+        }
+   
+    .left{
+    margin: auto;
+    Width: 100%;
+     }
+
+h1, h2, h3, h4{
+font-family: serif;
+color: white;}
+
+</style>
+
+    
+    
+<div class ="left">
+    </div>
+ 
+<body>    
+<h1>Travel Information</h1>
+<p><span class = "error">* = required field. </span></p>
+<form method = "POST" action ="travelinfo.php">
+         <table>
+            <tr>
+               <td>Name:</td>
+               <td><input type = "text" name = "name">
+                  <span class = "error">* <?php echo $nameErr;?></span>
+               </td>
+            </tr>
+            
+            <tr>
+               <td>E-mail: </td>
+               <td><input type = "text" name = "email">
+                  <span class = "error">* <?php echo $emailErr;?></span>
+               </td>
+            </tr>
+    
+            <tr>
+               <td>Phone Number: </td>
+               <td><input type = "text" name = "phone">
+                  <span class = "error">* <?php echo $phoneErr;?></span>
+               </td>
+            </tr>
+             
+             <tr>
+               <td>Number of Children Traveling: </td>
+               <td><input type = "number" name = "child">
+                  <span class = "error">* <?php echo $childErr;?></span>
+               </td>
+            </tr>
+             
+             <tr>
+               <td>Number of Adults Traveling: </td>
+               <td><input type = "number" name = "adult">
+                  <span class = "error">* <?php echo $adultErr;?></span>
+               </td>
+            </tr>
+    
+             <tr>
+               <td>Date of Departure: </td>
+               <td><input type = "date" name = "Ddate">
+                  <span class = "error">* <?php echo $DdateErr;?></span>
+               </td>
+            </tr>
+             
+             <tr>
+               <td>Date of Return: </td>
+               <td><input type = "date" name = "Rdate">
+                  <span class = "error">* <?php echo $RdateErr;?></span>
+               </td>
+            </tr>
+             
+             <tr>
+                 <td> <h2> Please Select a Destination:</h2></td>
+                 <td>
+                     <select name ="dest[]" size="4" multiple>
+                     <option value ="brisbane"> Brisbane, Austrailia </option>
+                     <option value ="Vancouver">Vancouver, Canada</option>
+                    <option value ="newyork"> New York City, United States </option>
+                     <option value ="berlin">Berlin, Germany</option>
+                      <option value ="cancun">Cancun, Mexico</option> 
+                     </select>
+                 </td>
+             </tr>
+         
+             
+             
+            <tr>
+               <td>
+                  <input type = "submit" name = "submit" value = "Submit"> 
+                   <input type = "reset" name ="reset" value = "reset">
+               </td>
+            </tr>
+            
+         </table>
+      </form>
+    
+             
+    </body>          
+</html>
